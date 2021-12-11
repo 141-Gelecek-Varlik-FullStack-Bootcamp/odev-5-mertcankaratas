@@ -11,7 +11,7 @@ namespace Business.Abstract
 {
     public interface IProductService
     {
-        IDataResult<List<Product>> GetAll();
+        IDataResult<List<ProductModel>> GetAll();
         IDataResult<Product> Get(int id);
         IResult Add(Product product);
         IResult Update(Product product);

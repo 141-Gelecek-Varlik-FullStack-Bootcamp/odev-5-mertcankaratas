@@ -18,7 +18,7 @@ namespace WebAPI.Controllers
     [ApiController]
     public class UserController : ControllerBase
     {
-        IUserService _userService;
+        private readonly IUserService _userService;
 
         //constructor injection 
         public UserController(IUserService userService)

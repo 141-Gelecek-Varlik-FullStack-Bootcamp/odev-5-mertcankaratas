@@ -1670,6 +1670,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
         "dependencies": {
+          "AutoMapper": "10.1.1",
           "Core": "1.0.0",
           "DataAccess": "1.0.0",
           "Entities": "1.0.0",

@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "vk2Aeb5L+KUOR3LNTqpA3XLfbH8SA1UEBPXfRisI1SgfHwUiol8EO57UR1Ey7urxWQA4rAMuH+vne38hLi3/9w==",
+  "dgSpecHash": "Tpo5zvA9YPb4CGqdbpNdz5VOvwILCVoPdPNziHmtqMSZ+jZHxg14x+7vX7G0rjUHdpgGjSln3MdxZyw9zEaReg==",
   "success": true,
   "projectFilePath": "C:\\Users\\Mertcan\\source\\repos\\Homework3\\Business\\Business.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Mertcan\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
     "C:\\Users\\Mertcan\\.nuget\\packages\\entityframework\\6.4.4\\entityframework.6.4.4.nupkg.sha512",
     "C:\\Users\\Mertcan\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\Mertcan\\.nuget\\packages\\microsoft.data.sqlclient\\2.0.1\\microsoft.data.sqlclient.2.0.1.nupkg.sha512",
@@ -70,7 +71,7 @@
     "C:\\Users\\Mertcan\\.nuget\\packages\\system.private.datacontractserialization\\4.3.0\\system.private.datacontractserialization.4.3.0.nupkg.sha512",
     "C:\\Users\\Mertcan\\.nuget\\packages\\system.private.uri\\4.3.2\\system.private.uri.4.3.2.nupkg.sha512",
     "C:\\Users\\Mertcan\\.nuget\\packages\\system.reflection\\4.3.0\\system.reflection.4.3.0.nupkg.sha512",
-    "C:\\Users\\Mertcan\\.nuget\\packages\\system.reflection.emit\\4.3.0\\system.reflection.emit.4.3.0.nupkg.sha512",
+    "C:\\Users\\Mertcan\\.nuget\\packages\\system.reflection.emit\\4.7.0\\system.reflection.emit.4.7.0.nupkg.sha512",
     "C:\\Users\\Mertcan\\.nuget\\packages\\system.reflection.emit.ilgeneration\\4.3.0\\system.reflection.emit.ilgeneration.4.3.0.nupkg.sha512",
     "C:\\Users\\Mertcan\\.nuget\\packages\\system.reflection.emit.lightweight\\4.3.0\\system.reflection.emit.lightweight.4.3.0.nupkg.sha512",
     "C:\\Users\\Mertcan\\.nuget\\packages\\system.reflection.extensions\\4.3.0\\system.reflection.extensions.4.3.0.nupkg.sha512",

@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace Model.Concrete
 {
+    
    public class ProductModel
     {
         public int Id { get; set; }
@@ -14,7 +15,7 @@ namespace Model.Concrete
         public string Name { get; set; }
         public string DisplayName { get; set; }
         public string Description { get; set; }
-        public decimal Price { get; set; }
+        public string Price { get; set; }
         public int Stock { get; set; }
         public bool IsActive { get; set; }
         public bool IsDeleted { get; set; }

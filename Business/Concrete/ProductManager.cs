@@ -1,4 +1,5 @@
-﻿using Business.Abstract;
+﻿using AutoMapper;
+using Business.Abstract;
 using Business.Constant;
 using Core.Utilities.Results;
 using DataAccess.Abstract;
@@ -21,9 +22,11 @@ namespace Business.Concrete
     public class ProductManager : IProductService
     {
         IProductDal _productDal;
-        public ProductManager(IProductDal productDal)
+        IMapper _mapper;
+        public ProductManager(IProductDal productDal,IMapper mapper)
         {
             _productDal = productDal;
+            _mapper = mapper;
         }
         public IResult Add(Product product)
         {
@@ -42,9 +45,12 @@ namespace Business.Concrete
             return new SuccessDataResult<Product>(_productDal.Get(p => p.Id == id));
         }
 
-        public IDataResult<List<Product>> GetAll()
+        public IDataResult<List<ProductModel>> GetAll()
         {
-            return new SuccessDataResult<List<Product>>(_productDal.GetAll(), Messages.ProductsListed);
+            var data = _productDal.GetAll();
+            var map = _mapper.Map<List<ProductModel>>(data);
+            return new SuccessDataResult<List<ProductModel>>(map, Messages.ProductsListed);
+           
         }
 
         public IResult Update(Product product)
