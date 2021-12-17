@@ -9,3 +9,6 @@
 
 ### Kullanıcılar yetkisi olmadan category ve productları listeleyebilir Diğer işlemler için yetki gerekir.
 
+### Sayfalama  Filtreleme ve Sıralama ayrı ayrı yazıldı.
+
+### Sayafalama Filtreleme ve Sıralama  tek bir istekte yazıldı.
