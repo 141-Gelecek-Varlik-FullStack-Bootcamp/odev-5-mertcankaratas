@@ -85,7 +85,7 @@ namespace Business.Concrete
         //verilen değerlere göre Sayfalama yapar
         public IDataResult<List<Product>>GetAllPaged(int pageNumber, int elementcount)
         {
-            if(pageNumber!=0 && elementcount != 0)
+            if(pageNumber >0 && elementcount > 0)
             {
                 
                 return new SuccessDataResult<List<Product>>(_productDal.GetAll().ToPagedList(pageNumber,elementcount).ToList(), Messages.ProductsListed);
@@ -98,7 +98,7 @@ namespace Business.Concrete
         //verilen değerlere göre sayfalama yapar filteler ve Price'a göre artan sırada listeler
         public IDataResult<List<Product>> GetAllPagedFilteringSortingAsc(int pageNumber, int elementcount, string name)
         {
-            if(pageNumber !=0 && elementcount !=0 && name != null)
+            if(pageNumber >0 && elementcount > 0 && name != null)
             {
 
                 return new SuccessDataResult<List<Product>>(_productDal.GetAll().Where(p => p.Name.Contains(name)).OrderBy(p => p.Price).ToPagedList(pageNumber, elementcount).ToList(), Messages.ProductsListed);
@@ -109,7 +109,7 @@ namespace Business.Concrete
         //verilen değerlere göre sayfalama yapar filteler ve Price'a göre azalan sırada listeler
         public IDataResult<List<Product>> GetAllPagedFilteringSortingDesc(int pageNumber, int elementcount, string name)
         {
-            if (pageNumber != 0 && elementcount !=0 && name != null)
+            if (pageNumber > 0 && elementcount >0 && name != null)
             {
 
                 return new SuccessDataResult<List<Product>>(_productDal.GetAll().Where(p=>p.Name.Contains(name)).OrderByDescending(p=>p.Price).ToPagedList(pageNumber, elementcount).ToList(), Messages.ProductsListed);
