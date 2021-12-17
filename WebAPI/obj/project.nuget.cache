@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "JMZMP4QRL2zdn+3Zq1VMxtIDDdZj4wzZ4sPMHHEqzgeS/K4QGWvIII8hCRdnA8ACULOiQ4WGbFi2nTzhT+IZmA==",
+  "dgSpecHash": "fo669oLiLYxTCaPbSHOlEhSG6wvK0de5jwsLIsAvclwL7TSP6hYB5bSzoEL3T532Y+APFNZVc89dMjvV3QZP3Q==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Mertcan\\source\\repos\\Homework3\\WebAPI\\WebAPI.csproj",
+  "projectFilePath": "C:\\Users\\Mertcan\\source\\repos\\141-Gelecek-Varlik-FullStack-Bootcamp\\odev-3-mertcankaratas\\WebAPI\\WebAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Mertcan\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
     "C:\\Users\\Mertcan\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\8.1.1\\automapper.extensions.microsoft.dependencyinjection.8.1.1.nupkg.sha512",

@@ -52,6 +52,22 @@ namespace Business.Concrete
             return new SuccessDataResult<List<ProductModel>>(map, Messages.ProductsListed);
            
         }
+        // fiyat üstünden artan sırada listeleme yapar 
+        public IDataResult<List<Product>> GetAllSortedAsc()
+        {
+            return new SuccessDataResult<List<Product>>(_productDal.GetAll().OrderBy(p=>p.Price).ToList(), Messages.ProductsListed);
+        }
+
+        // fiyat üstünden azalan sırada listeleme yapar 
+        public IDataResult<List<Product>> GetAllSortedDesc()
+        {
+            return new SuccessDataResult<List<Product>>(_productDal.GetAll().OrderByDescending(p => p.Price).ToList(), Messages.ProductsListed);
+        }
+        // isme göre filtreleme yapar ve  fiyat üstünden azalan sırada listeleme yapar 
+        public IDataResult<List<Product>> GetAllFiltered(string name)
+        {
+            return new SuccessDataResult<List<Product>>(_productDal.GetAll().Where(p => p.Name.Contains(name)).OrderByDescending(p=>p.Price).ToList(), Messages.ProductsListed);
+        }
 
         public IResult Update(Product product)
         {

@@ -43,6 +43,50 @@ namespace WebAPI.Controllers
 
         }
 
+        [HttpGet("getallsortasc")]
+
+        public IActionResult GetAllSortingAsc()
+        {
+            var result = _productService.GetAllSortedAsc();
+            if (result.Success)
+            {
+                return Ok(result);
+            }
+
+            return BadRequest(result);
+
+        }
+
+        [HttpGet("getallsortdesc")]
+
+        public IActionResult GetAllSortingDesc()
+        {
+            var result = _productService.GetAllSortedDesc();
+            if (result.Success)
+            {
+                return Ok(result);
+            }
+
+            return BadRequest(result);
+
+        }
+
+
+        [HttpGet("getallfilter")]
+
+        public IActionResult GetAllSorting(string filter)
+        {
+            var result = _productService.GetAllFiltered(filter);
+            if (result.Success)
+            {
+                return Ok(result);
+            }
+
+            return BadRequest(result);
+
+        }
+
+
         //Bir ürün eklemek için kullanılır
         [HttpPost("add")]
         [ServiceFilter(typeof(ValidationFilterAttribute))]

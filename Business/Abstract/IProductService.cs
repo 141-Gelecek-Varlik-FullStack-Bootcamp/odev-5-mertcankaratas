@@ -12,6 +12,9 @@ namespace Business.Abstract
     public interface IProductService
     {
         IDataResult<List<ProductModel>> GetAll();
+        IDataResult<List<Product>> GetAllSortedAsc();
+        IDataResult<List<Product>> GetAllSortedDesc();
+        IDataResult<List<Product>> GetAllFiltered(string name);
         IDataResult<Product> Get(int id);
         IResult Add(Product product);
         IResult Update(Product product);

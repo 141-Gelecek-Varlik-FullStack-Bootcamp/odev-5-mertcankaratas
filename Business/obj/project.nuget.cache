@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Tpo5zvA9YPb4CGqdbpNdz5VOvwILCVoPdPNziHmtqMSZ+jZHxg14x+7vX7G0rjUHdpgGjSln3MdxZyw9zEaReg==",
+  "dgSpecHash": "Y7UXzMsMAPBYMiK6ib5vlt20EhXNaChcPjqAWNupNZPvtuA1x3pZSfI3Bsl4UeWMbMAziG/HHqSTcAmnHvl3Vw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Mertcan\\source\\repos\\Homework3\\Business\\Business.csproj",
+  "projectFilePath": "C:\\Users\\Mertcan\\source\\repos\\141-Gelecek-Varlik-FullStack-Bootcamp\\odev-3-mertcankaratas\\Business\\Business.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Mertcan\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
     "C:\\Users\\Mertcan\\.nuget\\packages\\entityframework\\6.4.4\\entityframework.6.4.4.nupkg.sha512",

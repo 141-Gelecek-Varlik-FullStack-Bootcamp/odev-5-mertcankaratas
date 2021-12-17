@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Mertcan\\source\\repos\\Homework3\\WebAPI\\WebAPI.csproj": {}
+    "C:\\Users\\Mertcan\\source\\repos\\141-Gelecek-Varlik-FullStack-Bootcamp\\odev-3-mertcankaratas\\WebAPI\\WebAPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Mertcan\\source\\repos\\Homework3\\Business\\Business.csproj": {
+    "C:\\Users\\Mertcan\\source\\repos\\141-Gelecek-Varlik-FullStack-Bootcamp\\odev-3-mertcankaratas\\Business\\Business.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Mertcan\\source\\repos\\Homework3\\Business\\Business.csproj",
+        "projectUniqueName": "C:\\Users\\Mertcan\\source\\repos\\141-Gelecek-Varlik-FullStack-Bootcamp\\odev-3-mertcankaratas\\Business\\Business.csproj",
         "projectName": "Business",
-        "projectPath": "C:\\Users\\Mertcan\\source\\repos\\Homework3\\Business\\Business.csproj",
+        "projectPath": "C:\\Users\\Mertcan\\source\\repos\\141-Gelecek-Varlik-FullStack-Bootcamp\\odev-3-mertcankaratas\\Business\\Business.csproj",
         "packagesPath": "C:\\Users\\Mertcan\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Mertcan\\source\\repos\\Homework3\\Business\\obj\\",
+        "outputPath": "C:\\Users\\Mertcan\\source\\repos\\141-Gelecek-Varlik-FullStack-Bootcamp\\odev-3-mertcankaratas\\Business\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
           "C:\\Users\\Mertcan\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -32,17 +28,17 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\Mertcan\\source\\repos\\Homework3\\Core\\Core.csproj": {
-                "projectPath": "C:\\Users\\Mertcan\\source\\repos\\Homework3\\Core\\Core.csproj"
+              "C:\\Users\\Mertcan\\source\\repos\\141-Gelecek-Varlik-FullStack-Bootcamp\\odev-3-mertcankaratas\\Core\\Core.csproj": {
+                "projectPath": "C:\\Users\\Mertcan\\source\\repos\\141-Gelecek-Varlik-FullStack-Bootcamp\\odev-3-mertcankaratas\\Core\\Core.csproj"
               },
-              "C:\\Users\\Mertcan\\source\\repos\\Homework3\\DataAccess\\DataAccess.csproj": {
-                "projectPath": "C:\\Users\\Mertcan\\source\\repos\\Homework3\\DataAccess\\DataAccess.csproj"
+              "C:\\Users\\Mertcan\\source\\repos\\141-Gelecek-Varlik-FullStack-Bootcamp\\odev-3-mertcankaratas\\DataAccess\\DataAccess.csproj": {
+                "projectPath": "C:\\Users\\Mertcan\\source\\repos\\141-Gelecek-Varlik-FullStack-Bootcamp\\odev-3-mertcankaratas\\DataAccess\\DataAccess.csproj"
               },
-              "C:\\Users\\Mertcan\\source\\repos\\Homework3\\Entities\\Entities.csproj": {
-                "projectPath": "C:\\Users\\Mertcan\\source\\repos\\Homework3\\Entities\\Entities.csproj"
+              "C:\\Users\\Mertcan\\source\\repos\\141-Gelecek-Varlik-FullStack-Bootcamp\\odev-3-mertcankaratas\\Entities\\Entities.csproj": {
+                "projectPath": "C:\\Users\\Mertcan\\source\\repos\\141-Gelecek-Varlik-FullStack-Bootcamp\\odev-3-mertcankaratas\\Entities\\Entities.csproj"
               },
-              "C:\\Users\\Mertcan\\source\\repos\\Homework3\\Model\\Model.csproj": {
-                "projectPath": "C:\\Users\\Mertcan\\source\\repos\\Homework3\\Model\\Model.csproj"
+              "C:\\Users\\Mertcan\\source\\repos\\141-Gelecek-Varlik-FullStack-Bootcamp\\odev-3-mertcankaratas\\Model\\Model.csproj": {
+                "projectPath": "C:\\Users\\Mertcan\\source\\repos\\141-Gelecek-Varlik-FullStack-Bootcamp\\odev-3-mertcankaratas\\Model\\Model.csproj"
               }
             }
           }
@@ -77,25 +73,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.403\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Mertcan\\source\\repos\\Homework3\\Core\\Core.csproj": {
+    "C:\\Users\\Mertcan\\source\\repos\\141-Gelecek-Varlik-FullStack-Bootcamp\\odev-3-mertcankaratas\\Core\\Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Mertcan\\source\\repos\\Homework3\\Core\\Core.csproj",
+        "projectUniqueName": "C:\\Users\\Mertcan\\source\\repos\\141-Gelecek-Varlik-FullStack-Bootcamp\\odev-3-mertcankaratas\\Core\\Core.csproj",
         "projectName": "Core",
-        "projectPath": "C:\\Users\\Mertcan\\source\\repos\\Homework3\\Core\\Core.csproj",
+        "projectPath": "C:\\Users\\Mertcan\\source\\repos\\141-Gelecek-Varlik-FullStack-Bootcamp\\odev-3-mertcankaratas\\Core\\Core.csproj",
         "packagesPath": "C:\\Users\\Mertcan\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Mertcan\\source\\repos\\Homework3\\Core\\obj\\",
+        "outputPath": "C:\\Users\\Mertcan\\source\\repos\\141-Gelecek-Varlik-FullStack-Bootcamp\\odev-3-mertcankaratas\\Core\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
           "C:\\Users\\Mertcan\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -141,25 +133,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.403\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Mertcan\\source\\repos\\Homework3\\DataAccess\\DataAccess.csproj": {
+    "C:\\Users\\Mertcan\\source\\repos\\141-Gelecek-Varlik-FullStack-Bootcamp\\odev-3-mertcankaratas\\DataAccess\\DataAccess.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Mertcan\\source\\repos\\Homework3\\DataAccess\\DataAccess.csproj",
+        "projectUniqueName": "C:\\Users\\Mertcan\\source\\repos\\141-Gelecek-Varlik-FullStack-Bootcamp\\odev-3-mertcankaratas\\DataAccess\\DataAccess.csproj",
         "projectName": "DataAccess",
-        "projectPath": "C:\\Users\\Mertcan\\source\\repos\\Homework3\\DataAccess\\DataAccess.csproj",
+        "projectPath": "C:\\Users\\Mertcan\\source\\repos\\141-Gelecek-Varlik-FullStack-Bootcamp\\odev-3-mertcankaratas\\DataAccess\\DataAccess.csproj",
         "packagesPath": "C:\\Users\\Mertcan\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Mertcan\\source\\repos\\Homework3\\DataAccess\\obj\\",
+        "outputPath": "C:\\Users\\Mertcan\\source\\repos\\141-Gelecek-Varlik-FullStack-Bootcamp\\odev-3-mertcankaratas\\DataAccess\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
           "C:\\Users\\Mertcan\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -173,14 +161,14 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\Mertcan\\source\\repos\\Homework3\\Core\\Core.csproj": {
-                "projectPath": "C:\\Users\\Mertcan\\source\\repos\\Homework3\\Core\\Core.csproj"
+              "C:\\Users\\Mertcan\\source\\repos\\141-Gelecek-Varlik-FullStack-Bootcamp\\odev-3-mertcankaratas\\Core\\Core.csproj": {
+                "projectPath": "C:\\Users\\Mertcan\\source\\repos\\141-Gelecek-Varlik-FullStack-Bootcamp\\odev-3-mertcankaratas\\Core\\Core.csproj"
               },
-              "C:\\Users\\Mertcan\\source\\repos\\Homework3\\Entities\\Entities.csproj": {
-                "projectPath": "C:\\Users\\Mertcan\\source\\repos\\Homework3\\Entities\\Entities.csproj"
+              "C:\\Users\\Mertcan\\source\\repos\\141-Gelecek-Varlik-FullStack-Bootcamp\\odev-3-mertcankaratas\\Entities\\Entities.csproj": {
+                "projectPath": "C:\\Users\\Mertcan\\source\\repos\\141-Gelecek-Varlik-FullStack-Bootcamp\\odev-3-mertcankaratas\\Entities\\Entities.csproj"
               },
-              "C:\\Users\\Mertcan\\source\\repos\\Homework3\\Model\\Model.csproj": {
-                "projectPath": "C:\\Users\\Mertcan\\source\\repos\\Homework3\\Model\\Model.csproj"
+              "C:\\Users\\Mertcan\\source\\repos\\141-Gelecek-Varlik-FullStack-Bootcamp\\odev-3-mertcankaratas\\Model\\Model.csproj": {
+                "projectPath": "C:\\Users\\Mertcan\\source\\repos\\141-Gelecek-Varlik-FullStack-Bootcamp\\odev-3-mertcankaratas\\Model\\Model.csproj"
               }
             }
           }
@@ -223,25 +211,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.403\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Mertcan\\source\\repos\\Homework3\\Entities\\Entities.csproj": {
+    "C:\\Users\\Mertcan\\source\\repos\\141-Gelecek-Varlik-FullStack-Bootcamp\\odev-3-mertcankaratas\\Entities\\Entities.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Mertcan\\source\\repos\\Homework3\\Entities\\Entities.csproj",
+        "projectUniqueName": "C:\\Users\\Mertcan\\source\\repos\\141-Gelecek-Varlik-FullStack-Bootcamp\\odev-3-mertcankaratas\\Entities\\Entities.csproj",
         "projectName": "Entities",
-        "projectPath": "C:\\Users\\Mertcan\\source\\repos\\Homework3\\Entities\\Entities.csproj",
+        "projectPath": "C:\\Users\\Mertcan\\source\\repos\\141-Gelecek-Varlik-FullStack-Bootcamp\\odev-3-mertcankaratas\\Entities\\Entities.csproj",
         "packagesPath": "C:\\Users\\Mertcan\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Mertcan\\source\\repos\\Homework3\\Entities\\obj\\",
+        "outputPath": "C:\\Users\\Mertcan\\source\\repos\\141-Gelecek-Varlik-FullStack-Bootcamp\\odev-3-mertcankaratas\\Entities\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
           "C:\\Users\\Mertcan\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -255,8 +239,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\Mertcan\\source\\repos\\Homework3\\Core\\Core.csproj": {
-                "projectPath": "C:\\Users\\Mertcan\\source\\repos\\Homework3\\Core\\Core.csproj"
+              "C:\\Users\\Mertcan\\source\\repos\\141-Gelecek-Varlik-FullStack-Bootcamp\\odev-3-mertcankaratas\\Core\\Core.csproj": {
+                "projectPath": "C:\\Users\\Mertcan\\source\\repos\\141-Gelecek-Varlik-FullStack-Bootcamp\\odev-3-mertcankaratas\\Core\\Core.csproj"
               }
             }
           }
@@ -285,25 +269,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.403\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Mertcan\\source\\repos\\Homework3\\Model\\Model.csproj": {
+    "C:\\Users\\Mertcan\\source\\repos\\141-Gelecek-Varlik-FullStack-Bootcamp\\odev-3-mertcankaratas\\Model\\Model.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Mertcan\\source\\repos\\Homework3\\Model\\Model.csproj",
+        "projectUniqueName": "C:\\Users\\Mertcan\\source\\repos\\141-Gelecek-Varlik-FullStack-Bootcamp\\odev-3-mertcankaratas\\Model\\Model.csproj",
         "projectName": "Model",
-        "projectPath": "C:\\Users\\Mertcan\\source\\repos\\Homework3\\Model\\Model.csproj",
+        "projectPath": "C:\\Users\\Mertcan\\source\\repos\\141-Gelecek-Varlik-FullStack-Bootcamp\\odev-3-mertcankaratas\\Model\\Model.csproj",
         "packagesPath": "C:\\Users\\Mertcan\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Mertcan\\source\\repos\\Homework3\\Model\\obj\\",
+        "outputPath": "C:\\Users\\Mertcan\\source\\repos\\141-Gelecek-Varlik-FullStack-Bootcamp\\odev-3-mertcankaratas\\Model\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
           "C:\\Users\\Mertcan\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -317,11 +297,11 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\Mertcan\\source\\repos\\Homework3\\Core\\Core.csproj": {
-                "projectPath": "C:\\Users\\Mertcan\\source\\repos\\Homework3\\Core\\Core.csproj"
+              "C:\\Users\\Mertcan\\source\\repos\\141-Gelecek-Varlik-FullStack-Bootcamp\\odev-3-mertcankaratas\\Core\\Core.csproj": {
+                "projectPath": "C:\\Users\\Mertcan\\source\\repos\\141-Gelecek-Varlik-FullStack-Bootcamp\\odev-3-mertcankaratas\\Core\\Core.csproj"
               },
-              "C:\\Users\\Mertcan\\source\\repos\\Homework3\\Entities\\Entities.csproj": {
-                "projectPath": "C:\\Users\\Mertcan\\source\\repos\\Homework3\\Entities\\Entities.csproj"
+              "C:\\Users\\Mertcan\\source\\repos\\141-Gelecek-Varlik-FullStack-Bootcamp\\odev-3-mertcankaratas\\Entities\\Entities.csproj": {
+                "projectPath": "C:\\Users\\Mertcan\\source\\repos\\141-Gelecek-Varlik-FullStack-Bootcamp\\odev-3-mertcankaratas\\Entities\\Entities.csproj"
               }
             }
           }
@@ -350,25 +330,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.403\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Mertcan\\source\\repos\\Homework3\\WebAPI\\WebAPI.csproj": {
+    "C:\\Users\\Mertcan\\source\\repos\\141-Gelecek-Varlik-FullStack-Bootcamp\\odev-3-mertcankaratas\\WebAPI\\WebAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Mertcan\\source\\repos\\Homework3\\WebAPI\\WebAPI.csproj",
+        "projectUniqueName": "C:\\Users\\Mertcan\\source\\repos\\141-Gelecek-Varlik-FullStack-Bootcamp\\odev-3-mertcankaratas\\WebAPI\\WebAPI.csproj",
         "projectName": "WebAPI",
-        "projectPath": "C:\\Users\\Mertcan\\source\\repos\\Homework3\\WebAPI\\WebAPI.csproj",
+        "projectPath": "C:\\Users\\Mertcan\\source\\repos\\141-Gelecek-Varlik-FullStack-Bootcamp\\odev-3-mertcankaratas\\WebAPI\\WebAPI.csproj",
         "packagesPath": "C:\\Users\\Mertcan\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Mertcan\\source\\repos\\Homework3\\WebAPI\\obj\\",
+        "outputPath": "C:\\Users\\Mertcan\\source\\repos\\141-Gelecek-Varlik-FullStack-Bootcamp\\odev-3-mertcankaratas\\WebAPI\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
           "C:\\Users\\Mertcan\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -382,20 +358,20 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\Mertcan\\source\\repos\\Homework3\\Business\\Business.csproj": {
-                "projectPath": "C:\\Users\\Mertcan\\source\\repos\\Homework3\\Business\\Business.csproj"
+              "C:\\Users\\Mertcan\\source\\repos\\141-Gelecek-Varlik-FullStack-Bootcamp\\odev-3-mertcankaratas\\Business\\Business.csproj": {
+                "projectPath": "C:\\Users\\Mertcan\\source\\repos\\141-Gelecek-Varlik-FullStack-Bootcamp\\odev-3-mertcankaratas\\Business\\Business.csproj"
               },
-              "C:\\Users\\Mertcan\\source\\repos\\Homework3\\Core\\Core.csproj": {
-                "projectPath": "C:\\Users\\Mertcan\\source\\repos\\Homework3\\Core\\Core.csproj"
+              "C:\\Users\\Mertcan\\source\\repos\\141-Gelecek-Varlik-FullStack-Bootcamp\\odev-3-mertcankaratas\\Core\\Core.csproj": {
+                "projectPath": "C:\\Users\\Mertcan\\source\\repos\\141-Gelecek-Varlik-FullStack-Bootcamp\\odev-3-mertcankaratas\\Core\\Core.csproj"
               },
-              "C:\\Users\\Mertcan\\source\\repos\\Homework3\\DataAccess\\DataAccess.csproj": {
-                "projectPath": "C:\\Users\\Mertcan\\source\\repos\\Homework3\\DataAccess\\DataAccess.csproj"
+              "C:\\Users\\Mertcan\\source\\repos\\141-Gelecek-Varlik-FullStack-Bootcamp\\odev-3-mertcankaratas\\DataAccess\\DataAccess.csproj": {
+                "projectPath": "C:\\Users\\Mertcan\\source\\repos\\141-Gelecek-Varlik-FullStack-Bootcamp\\odev-3-mertcankaratas\\DataAccess\\DataAccess.csproj"
               },
-              "C:\\Users\\Mertcan\\source\\repos\\Homework3\\Entities\\Entities.csproj": {
-                "projectPath": "C:\\Users\\Mertcan\\source\\repos\\Homework3\\Entities\\Entities.csproj"
+              "C:\\Users\\Mertcan\\source\\repos\\141-Gelecek-Varlik-FullStack-Bootcamp\\odev-3-mertcankaratas\\Entities\\Entities.csproj": {
+                "projectPath": "C:\\Users\\Mertcan\\source\\repos\\141-Gelecek-Varlik-FullStack-Bootcamp\\odev-3-mertcankaratas\\Entities\\Entities.csproj"
               },
-              "C:\\Users\\Mertcan\\source\\repos\\Homework3\\Model\\Model.csproj": {
-                "projectPath": "C:\\Users\\Mertcan\\source\\repos\\Homework3\\Model\\Model.csproj"
+              "C:\\Users\\Mertcan\\source\\repos\\141-Gelecek-Varlik-FullStack-Bootcamp\\odev-3-mertcankaratas\\Model\\Model.csproj": {
+                "projectPath": "C:\\Users\\Mertcan\\source\\repos\\141-Gelecek-Varlik-FullStack-Bootcamp\\odev-3-mertcankaratas\\Model\\Model.csproj"
               }
             }
           }
@@ -441,7 +417,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.403\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     }

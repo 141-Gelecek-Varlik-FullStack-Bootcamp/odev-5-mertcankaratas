@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Di6+rxDCaB4tSr8hrSli6Fdi/e1ZfbnMw5IPPSROPH+x8UO4vNs/D7jzUxbS1c/lni/z5+D0NRz2H+czOBeo2A==",
+  "dgSpecHash": "w0mflsCFkuJ5F6Rn6Dv7sb0rWJy+wvVbUr4CvW+yJACG1LGbYRQT7FD7XB+oHmRl4z+D7xr+IEo00lXWZ/KYBQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Mertcan\\source\\repos\\Homework3\\Model\\Model.csproj",
+  "projectFilePath": "C:\\Users\\Mertcan\\source\\repos\\141-Gelecek-Varlik-FullStack-Bootcamp\\odev-3-mertcankaratas\\Model\\Model.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Mertcan\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\Mertcan\\.nuget\\packages\\microsoft.data.sqlclient\\2.0.1\\microsoft.data.sqlclient.2.0.1.nupkg.sha512",

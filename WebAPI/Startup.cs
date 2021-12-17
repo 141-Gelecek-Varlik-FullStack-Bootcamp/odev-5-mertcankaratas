@@ -36,16 +36,18 @@ namespace WebAPI
             var _mappingProfile = new MapperConfiguration(mp => { mp.AddProfile(new MappingProfile()); });
             IMapper mapper = _mappingProfile.CreateMapper();
             services.AddSingleton(mapper);
-            services.AddSingleton<IProductService, ProductManager>();
-            services.AddSingleton<IProductDal, ProductDal>();
-            services.AddSingleton<ICategoryService, CategoryManager>();
-            services.AddSingleton<ICategoryDal, CategoryDal>();
-            services.AddSingleton<IUserService, UserManager>();
-            services.AddSingleton<IUserDal, UserDal>();
-            services.AddSingleton<IAuthService, AuthManager>();
+            services.AddTransient<IProductService, ProductManager>();
+            services.AddTransient<IProductDal, ProductDal>();
+            services.AddTransient<ICategoryService, CategoryManager>();
+            services.AddTransient<ICategoryDal, CategoryDal>();
+            services.AddTransient<IUserService, UserManager>();
+            services.AddTransient<IUserDal, UserDal>();
+            services.AddTransient<IAuthService, AuthManager>();
             services.AddScoped<ValidationFilterAttribute>();
-            services.AddScoped<GrootContext>();
+
+            services.AddMemoryCache();
             services.AddControllers();
+
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "WebAPI", Version = "v1" });

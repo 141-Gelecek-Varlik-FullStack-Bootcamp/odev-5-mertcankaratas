@@ -17,8 +17,8 @@ namespace Entities.Concrete
         public bool IsActive { get; set; }
         public bool IsDeleted { get; set; }
         public DateTime Idate { get; set; }
-        public DateTime Udate { get; set; }
+        public DateTime? Udate { get; set; }
         public int Iuser { get; set; }
-        public int Uuser { get; set; }
+        public int? Uuser { get; set; }
     }
 }
