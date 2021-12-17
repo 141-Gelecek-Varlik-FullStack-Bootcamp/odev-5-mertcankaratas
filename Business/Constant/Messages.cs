@@ -37,5 +37,6 @@ namespace Business.Constant
         public static string UserAlreadyExists = "kullanıcı mevcut";
         public static string AccessTokenCreated = "giriş tokenı yaratıldı";
         public static string CheckEmailOrPassword = "Email ve Parolanızı kontrol edip tekrar deneyiniz.";
+        public static string FieldNotNull = "Filtreleme yapılacak alanlar boş bırakılmamalıdır.";
     }
 }

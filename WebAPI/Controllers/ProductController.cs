@@ -28,8 +28,8 @@ namespace WebAPI.Controllers
 
 
         //Sistemde olan tüm Ürünleri listeler 
-
         [HttpGet("getall")]
+       // [ServiceFilter(typeof(ValidationFilterAttribute))]
 
         public IActionResult Getall()
         {
@@ -43,8 +43,61 @@ namespace WebAPI.Controllers
 
         }
 
-        [HttpGet("getallsortasc")]
 
+        //verilen değerlere göre Sayfalama yapar
+        [HttpGet("getallpaged")]
+       // [ServiceFilter(typeof(ValidationFilterAttribute))]
+
+        public IActionResult GetAllPaged(int pageNumber,int elementCount)
+        {
+            var result = _productService.GetAllPaged(pageNumber,elementCount);
+            if (result.Success)
+            {
+                return Ok(result);
+            }
+
+            return BadRequest(result);
+
+        }
+
+
+        //verilen değerlere göre sayfalama yapar filteler ve Price'a göre artan sırada listeler
+        [HttpGet("getallpagedfilterasc")]
+        //[ServiceFilter(typeof(ValidationFilterAttribute))]
+
+        public IActionResult GetAllGetAllPagedFilteringSortingAsc(int pageNumber, int elementCount,string name)
+        {
+            var result = _productService.GetAllPagedFilteringSortingAsc(pageNumber, elementCount,name);
+            if (result.Success)
+            {
+                return Ok(result);
+            }
+
+            return BadRequest(result);
+
+        }
+
+        //verilen değerlere göre sayfalama yapar filteler ve Price'a göre azalan sırada listeler
+
+        [HttpGet("getallpagedfilterdesc")]
+       // [ServiceFilter(typeof(ValidationFilterAttribute))]
+
+        public IActionResult GetAllGetAllPagedFilteringSortingDesc(int pageNumber, int elementCount, string name)
+        {
+            var result = _productService.GetAllPagedFilteringSortingDesc(pageNumber, elementCount, name);
+            if (result.Success)
+            {
+                return Ok(result);
+            }
+
+            return BadRequest(result);
+
+        }
+
+
+        //Price'a göre artan sırada sıralama yapar
+        [HttpGet("getallsortasc")]
+        // [ServiceFilter(typeof(ValidationFilterAttribute))]
         public IActionResult GetAllSortingAsc()
         {
             var result = _productService.GetAllSortedAsc();
@@ -57,8 +110,9 @@ namespace WebAPI.Controllers
 
         }
 
+        //Price'a göre azalan sırada sıralama yapar
         [HttpGet("getallsortdesc")]
-
+       // [ServiceFilter(typeof(ValidationFilterAttribute))]
         public IActionResult GetAllSortingDesc()
         {
             var result = _productService.GetAllSortedDesc();
@@ -71,9 +125,10 @@ namespace WebAPI.Controllers
 
         }
 
+        // ürünleri Name'e göre filtelemek için kullanılır  
 
         [HttpGet("getallfilter")]
-
+       // [ServiceFilter(typeof(ValidationFilterAttribute))]
         public IActionResult GetAllSorting(string filter)
         {
             var result = _productService.GetAllFiltered(filter);
@@ -142,7 +197,7 @@ namespace WebAPI.Controllers
 
         // id'si verilen ürünün bilgilerine ulaşmak için kullanılır
         [HttpGet("getbyid")]
-        [ServiceFilter(typeof(ValidationFilterAttribute))]
+        //[ServiceFilter(typeof(ValidationFilterAttribute))]
         public IActionResult GetBYId(int id)
         {
             var result = _productService.Get(id);

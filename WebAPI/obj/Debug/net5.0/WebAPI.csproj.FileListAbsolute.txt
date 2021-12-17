@@ -158,3 +158,4 @@ C:\Users\Mertcan\Source\Repos\141-Gelecek-Varlik-FullStack-Bootcamp\odev-3-mertc
 C:\Users\Mertcan\Source\Repos\141-Gelecek-Varlik-FullStack-Bootcamp\odev-3-mertcankaratas\WebAPI\obj\Debug\net5.0\ref\WebAPI.dll
 C:\Users\Mertcan\Source\Repos\141-Gelecek-Varlik-FullStack-Bootcamp\odev-3-mertcankaratas\WebAPI\obj\Debug\net5.0\WebAPI.pdb
 C:\Users\Mertcan\Source\Repos\141-Gelecek-Varlik-FullStack-Bootcamp\odev-3-mertcankaratas\WebAPI\obj\Debug\net5.0\WebAPI.genruntimeconfig.cache
+C:\Users\Mertcan\source\repos\141-Gelecek-Varlik-FullStack-Bootcamp\odev-3-mertcankaratas\WebAPI\bin\Debug\net5.0\PagedList.dll

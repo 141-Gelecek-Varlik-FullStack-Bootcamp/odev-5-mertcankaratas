@@ -12,6 +12,10 @@ namespace Business.Abstract
     public interface IProductService
     {
         IDataResult<List<ProductModel>> GetAll();
+        IDataResult<List<Product>> GetAllPaged(int pageNumber,int elementcount);
+        IDataResult<List<Product>> GetAllPagedFilteringSortingAsc(int pageNumber,int elementcount,string name);
+        IDataResult<List<Product>> GetAllPagedFilteringSortingDesc(int pageNumber,int elementcount,string name);
+
         IDataResult<List<Product>> GetAllSortedAsc();
         IDataResult<List<Product>> GetAllSortedDesc();
         IDataResult<List<Product>> GetAllFiltered(string name);
