@@ -45,7 +45,15 @@ namespace WebAPI
             services.AddTransient<IAuthService, AuthManager>();
             services.AddScoped<ValidationFilterAttribute>();
 
-            services.AddMemoryCache();
+            //InMemoryCache için inject
+            //services.AddMemoryCache();
+
+            services.AddStackExchangeRedisCache(options =>
+            {
+                options.Configuration = Configuration.GetConnectionString("Redis");
+                options.InstanceName = "RedisDemo_";
+            });
+
             services.AddControllers();
 
             services.AddSwaggerGen(c =>
