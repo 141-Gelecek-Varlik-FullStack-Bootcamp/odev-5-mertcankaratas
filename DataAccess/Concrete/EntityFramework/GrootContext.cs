@@ -15,8 +15,8 @@ namespace DataAccess.Concrete.EntityFramework
         
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            //optionsBuilder.UseSqlServer(@"Server=desktop-9d6tod0\sqlexpress;Database=Groot;Trusted_Connection=true");
-            optionsBuilder.UseSqlServer(@"Server=DESKTOP-C3QIC5D;Database=Groot;Trusted_Connection=true");
+            optionsBuilder.UseSqlServer(@"Server=desktop-9d6tod0\sqlexpress;Database=Groot;Trusted_Connection=true");
+            //optionsBuilder.UseSqlServer(@"Server=DESKTOP-C3QIC5D;Database=Groot;Trusted_Connection=true");
             
         }
 

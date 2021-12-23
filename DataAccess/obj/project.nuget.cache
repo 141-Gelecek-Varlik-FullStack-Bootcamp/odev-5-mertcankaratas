@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "5VI8jCQVuVlKwIGgg0ICF1EEXZJKzYLi2b5TqYsOtzZnf9HJStS1UFu7xgqV0HiLTnAm5RS0aYNRnqUInLyajA==",
+  "dgSpecHash": "5ozfncgoR4nDGNlvfSzAV+IqDMvVjcO7eHo1dLn+nE4zfNJ2l6yqJ/+wMF/ADCbNP5zZnhMkzLkSXF38FVVaaQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Mertcan\\source\\repos\\141-Gelecek-Varlik-FullStack-Bootcamp\\odev-3-mertcankaratas\\DataAccess\\DataAccess.csproj",
+  "projectFilePath": "C:\\Users\\Mertcan\\source\\repos\\141-Gelecek-Varlik-FullStack-Bootcamp\\odev-4-mertcankaratas\\DataAccess\\DataAccess.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Mertcan\\.nuget\\packages\\entityframework\\6.4.4\\entityframework.6.4.4.nupkg.sha512",
     "C:\\Users\\Mertcan\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",

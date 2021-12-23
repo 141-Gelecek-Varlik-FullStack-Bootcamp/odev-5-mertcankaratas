@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "BIpI8hmNpx2UADqcawU1FfnLXftYQRhzl7lVe8+WW0wkKRLrKM8TtmbVjATcAXsJfZZ6r3Qya0Ji7muiT0mbkQ==",
+  "dgSpecHash": "vF9psd7WtQXzWtjpdh9+YNmeyPo2z2ci1Pr9tSNMWmQVDRnH1X3OFQ6v9cqq+trEX5oj5bht9FrAQgp13bh7zA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Mertcan\\source\\repos\\141-Gelecek-Varlik-FullStack-Bootcamp\\odev-3-mertcankaratas\\Entities\\Entities.csproj",
+  "projectFilePath": "C:\\Users\\Mertcan\\source\\repos\\141-Gelecek-Varlik-FullStack-Bootcamp\\odev-4-mertcankaratas\\Entities\\Entities.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Mertcan\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\Mertcan\\.nuget\\packages\\microsoft.data.sqlclient\\2.0.1\\microsoft.data.sqlclient.2.0.1.nupkg.sha512",

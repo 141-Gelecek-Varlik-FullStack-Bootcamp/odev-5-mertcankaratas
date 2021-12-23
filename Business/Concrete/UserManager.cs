@@ -28,6 +28,7 @@ namespace Business.Concrete
         }
         public IResult Add(User user)
         {
+            user.Idatetime = DateTime.UtcNow;
             _userDal.Add(user);
             return new SuccessResult(Messages.UserAdded);
         }

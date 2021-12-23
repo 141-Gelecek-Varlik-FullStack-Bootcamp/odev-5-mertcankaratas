@@ -21,6 +21,6 @@ namespace Entities.Concrete
         public bool IsDeleted { get; set; }
         public DateTime Idatetime { get; set; }
         public DateTime? Udatetime { get; set; }
-       
+        public string Role { get; set; }
     }
 }
