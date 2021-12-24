@@ -422,13 +422,13 @@
               "target": "Package",
               "version": "[8.1.1, )"
             },
+            "Hangfire": {
+              "target": "Package",
+              "version": "[1.7.28, )"
+            },
             "Microsoft.Extensions.Caching.StackExchangeRedis": {
               "target": "Package",
               "version": "[5.0.1, )"
-            },
-            "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": {
-              "target": "Package",
-              "version": "[1.11.1, )"
             },
             "StackExchange.Redis": {
               "target": "Package",

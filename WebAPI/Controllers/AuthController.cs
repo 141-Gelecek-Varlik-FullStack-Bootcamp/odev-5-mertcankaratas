@@ -1,13 +1,16 @@
 ﻿using Business.Abstract;
+using Core.Utilities.Results;
 using Entities.Concrete;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Caching.Distributed;
 using Microsoft.Extensions.Caching.Memory;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using WebAPI.ActionFilters;
+using WebAPI.Extensions;
 
 namespace WebAPI.Controllers
 {/// <summary>
@@ -18,29 +21,33 @@ namespace WebAPI.Controllers
     public class AuthController : ControllerBase
     {
         private readonly IAuthService _authService;
-        private readonly IMemoryCache _memoryCache;
+        private readonly IDistributedCache _distributedCache;
 
-        public AuthController(IAuthService authService,IMemoryCache memoryCache)
+        public AuthController(IAuthService authService,IDistributedCache distributedCache)
         {
             _authService = authService;
-            _memoryCache = memoryCache;
+            _distributedCache = distributedCache;
+          
         }
 
 
         [HttpPost("login")]
         
-        public ActionResult Login(User user)
+        public async Task<IDataResult<User>> Login(User user)
         {
-            var result = _authService.Login(user);
+            var result =  _authService.Login(user);
             if (result.Success)
             {
-                if(!_memoryCache.TryGetValue("LoginUser",out  User loginUser))
-                {
-                    _memoryCache.Set("LoginUser", user);
-                }
-                return Ok(result);
+                //if(!_memoryCache.TryGetValue("LoginUser",out  User loginUser))
+                //{
+                //    _memoryCache.Set("LoginUser", user);
+                //}
+                string recordKey = "User_Login_Cache";
+
+               var caching = await _distributedCache.GetRecordAsync<User[]>(recordKey);
+                return  result;
             }
-            return BadRequest(result);
+            return result;
 
            
         }

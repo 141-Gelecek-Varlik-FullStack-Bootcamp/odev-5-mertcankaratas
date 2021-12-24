@@ -12,14 +12,14 @@ namespace WebAPI.ActionFilters
 {
     public class ValidationFilterAttribute : Attribute,IActionFilter
     {       
-        private readonly IMemoryCache _memoryCache;
+        //private readonly IMemoryCache _memoryCache;
 
 
-        public ValidationFilterAttribute(IMemoryCache memoryCache)
-        {
-            _memoryCache = memoryCache;
+        //public ValidationFilterAttribute(IMemoryCache memoryCache)
+        //{
+        //    _memoryCache = memoryCache;
 
-        }
+        //}
 
         public void OnActionExecuted(ActionExecutedContext context)
         {
@@ -28,10 +28,10 @@ namespace WebAPI.ActionFilters
 
         public void OnActionExecuting(ActionExecutingContext context)
         {
-            if (!_memoryCache.TryGetValue("LoginUser", out User loginUser))
-            {
-                context.Result = new UnauthorizedObjectResult("Bu işlemi gerçekleştirmek için Lütfen giriş yapınız");
-            }
+            //if (!_memoryCache.TryGetValue("LoginUser", out User loginUser))
+            //{
+            //    context.Result = new UnauthorizedObjectResult("Bu işlemi gerçekleştirmek için Lütfen giriş yapınız");
+            //}
         }
       
     }
