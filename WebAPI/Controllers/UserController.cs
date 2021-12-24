@@ -1,5 +1,7 @@
 ﻿using Business.Abstract;
+using Core.Job;
 using Entities.Concrete;
+using Hangfire;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Model.Concrete;
@@ -55,6 +57,7 @@ namespace WebAPI.Controllers
             if (result.Success)
             {
 
+                BackgroundJob.Schedule(() => EmailJob.SendMail(user.Email), TimeSpan.FromSeconds(30));
                 return Ok(result);
             }
 
