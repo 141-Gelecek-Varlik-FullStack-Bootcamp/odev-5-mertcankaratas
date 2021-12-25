@@ -51,6 +51,7 @@ namespace WebAPI.Controllers
         [HttpPost("add")]
         [ServiceFilter(typeof(ValidationFilterAttribute))]
 
+
         public IActionResult Add(User user)
         {
             var result = _userService.Add(user);

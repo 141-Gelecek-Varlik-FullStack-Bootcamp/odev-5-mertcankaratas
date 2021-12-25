@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Caching.Distributed;
 using Microsoft.Extensions.Caching.Memory;
+using StackExchange.Redis;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -22,7 +23,7 @@ namespace WebAPI.Controllers
     {
         private readonly IAuthService _authService;
         private readonly IDistributedCache _distributedCache;
-
+    
         public AuthController(IAuthService authService,IDistributedCache distributedCache)
         {
             _authService = authService;
@@ -33,7 +34,7 @@ namespace WebAPI.Controllers
 
         [HttpPost("login")]
         
-        public async Task<IDataResult<User>> Login(User user)
+        public IActionResult Login(User user)
         {
             var result =  _authService.Login(user);
             if (result.Success)
@@ -44,10 +45,15 @@ namespace WebAPI.Controllers
                 //}
                 string recordKey = "User_Login_Cache";
 
-               var caching = await _distributedCache.GetRecordAsync<User[]>(recordKey);
-                return  result;
+               var caching =  _distributedCache.GetRecordAsync<string>(recordKey);
+                if (caching.Result == null)
+                {
+                   _distributedCache.SetRecordAsync<string>(recordKey,user.ToString());
+                }
+                
+                return Ok(result);
             }
-            return result;
+            return BadRequest(result);
 
            
         }

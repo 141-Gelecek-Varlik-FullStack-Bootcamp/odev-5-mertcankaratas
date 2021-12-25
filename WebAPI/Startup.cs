@@ -14,6 +14,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
+using StackExchange.Redis;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -49,16 +50,18 @@ namespace WebAPI
             // services.AddScoped<IDistributedCache>();
             //InMemoryCache için inject
             //services.AddMemoryCache();
+            //services.AddSingleton<IConnectionMultiplexer>(x =>
+            //    ConnectionMultiplexer.Connect(Configuration.GetValue<string>("RedisConnection")));
 
 
-          
 
             services.AddDistributedMemoryCache();
             services.AddStackExchangeRedisCache(options =>
             {
-                
-                options.Configuration = Configuration.GetConnectionString("Redis");
-                
+
+               options.Configuration = Configuration.GetConnectionString("Redis");
+               //ConnectionMultiplexer.Connect("Redis");
+
             });
 
 

@@ -2,16 +2,27 @@
 using Entities.Concrete;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
+using Microsoft.Extensions.Caching.Distributed;
 using Microsoft.Extensions.Caching.Memory;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using WebAPI.Extensions;
 
 namespace WebAPI.ActionFilters
 {
     public class ValidationFilterAttribute : Attribute,IActionFilter
-    {       
+    {
+        private readonly IDistributedCache _distributedCache;
+
+        public ValidationFilterAttribute(IDistributedCache distributedCache)
+        {
+            _distributedCache = distributedCache;
+        }
+
+
+
         //private readonly IMemoryCache _memoryCache;
 
 
@@ -28,10 +39,13 @@ namespace WebAPI.ActionFilters
 
         public void OnActionExecuting(ActionExecutingContext context)
         {
-            //if (!_memoryCache.TryGetValue("LoginUser", out User loginUser))
-            //{
-            //    context.Result = new UnauthorizedObjectResult("Bu işlemi gerçekleştirmek için Lütfen giriş yapınız");
-            //}
+            string recordKey = "User_Login_Cache";
+            var cache = _distributedCache.GetRecordAsync<string>(recordKey);
+
+            if (cache.Result==null)
+            {
+                context.Result = new UnauthorizedObjectResult("Bu işlemi gerçekleştirmek için Lütfen giriş yapınız");
+            }
         }
       
     }
