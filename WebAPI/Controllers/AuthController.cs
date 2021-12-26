@@ -57,5 +57,23 @@ namespace WebAPI.Controllers
 
            
         }
+
+        [HttpPost("logout")]
+
+        public IActionResult LogOut()
+        {
+
+
+            string recordKey = "User_Login_Cache";
+
+            var caching = _distributedCache.GetRecordAsync<string>(recordKey);
+            if (caching.Result == null)
+            {
+                return BadRequest("Sisteme giriş yapmadınız böyle bir işlem gerçekleştiremezsiniz");
+            }
+            _distributedCache.DeleteRecordAsync<string>(recordKey);
+            return Ok("Başarılı bir şekilde sistemden çıkış yaptınız.");
+        }
+
     }
 }
