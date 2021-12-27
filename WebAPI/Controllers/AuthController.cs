@@ -34,7 +34,7 @@ namespace WebAPI.Controllers
 
         [HttpPost("login")]
         
-        public IActionResult Login(User user)
+        public  IActionResult Login(User user)
         {
             var result =  _authService.Login(user);
             if (result.Success)
@@ -45,10 +45,10 @@ namespace WebAPI.Controllers
                 //}
                 string recordKey = "User_Login_Cache";
 
-               var caching =  _distributedCache.GetRecordAsync<string>(recordKey);
+               var caching =  _distributedCache.GetRecordAsync<User>(recordKey);
                 if (caching.Result == null)
                 {
-                   _distributedCache.SetRecordAsync<string>(recordKey,user.ToString());
+                   _distributedCache.SetRecordAsync<User>(recordKey,user);
                 }
                 
                 return Ok(result);
@@ -66,12 +66,12 @@ namespace WebAPI.Controllers
 
             string recordKey = "User_Login_Cache";
 
-            var caching = _distributedCache.GetRecordAsync<string>(recordKey);
+            var caching = _distributedCache.GetRecordAsync<User>(recordKey);
             if (caching.Result == null)
             {
                 return BadRequest("Sisteme giriş yapmadınız böyle bir işlem gerçekleştiremezsiniz");
             }
-            _distributedCache.DeleteRecordAsync<string>(recordKey);
+             _distributedCache.DeleteRecordAsync<User>(recordKey);
             return Ok("Başarılı bir şekilde sistemden çıkış yaptınız.");
         }
 

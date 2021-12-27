@@ -40,7 +40,7 @@ namespace WebAPI.ActionFilters
         public void OnActionExecuting(ActionExecutingContext context)
         {
             string recordKey = "User_Login_Cache";
-            var cache = _distributedCache.GetRecordAsync<string>(recordKey);
+            var cache = _distributedCache.GetRecordAsync<User>(recordKey);
 
             if (cache.Result==null)
             {

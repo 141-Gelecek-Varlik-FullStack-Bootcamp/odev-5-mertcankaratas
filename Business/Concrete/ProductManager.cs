@@ -45,12 +45,12 @@ namespace Business.Concrete
             return new SuccessDataResult<Product>(_productDal.Get(p => p.Id == id));
         }
 
-        public IDataResult<List<ProductModel>> GetAll()
+        public IDataResult<List<Product>> GetAll()
         {
-            var data = _productDal.GetAll();
-            var map = _mapper.Map<List<ProductModel>>(data);
-            return new SuccessDataResult<List<ProductModel>>(map, Messages.ProductsListed);
-           
+            //var data = _productDal.GetAll();
+            //var map = _mapper.Map<List<ProductModel>>(data);
+            //return new SuccessDataResult<List<ProductModel>>(map, Messages.ProductsListed);
+            return new SuccessDataResult<List<Product>>(_productDal.GetAll(), Messages.ProductsListed);
         }
         // fiyat üstünden artan sırada listeleme yapar 
         public IDataResult<List<Product>> GetAllSortedAsc()

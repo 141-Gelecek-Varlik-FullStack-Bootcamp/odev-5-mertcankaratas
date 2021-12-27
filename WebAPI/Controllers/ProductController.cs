@@ -2,12 +2,14 @@
 using Entities.Concrete;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Caching.Distributed;
 using Model.Concrete;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using WebAPI.ActionFilters;
+using WebAPI.Extensions;
 
 namespace WebAPI.Controllers
 {
@@ -18,12 +20,16 @@ namespace WebAPI.Controllers
     [ApiController]
     public class ProductController : ControllerBase
     {
-        IProductService _productService;
+       private readonly IProductService _productService;
+       private readonly IDistributedCache _distributedCache;
+
+        
 
         //constructor injection 
-        public ProductController(IProductService productService)
+        public ProductController(IProductService productService, IDistributedCache distributedCache)
         {
             _productService = productService;
+            _distributedCache = distributedCache;
         }
 
 
@@ -36,6 +42,20 @@ namespace WebAPI.Controllers
             var result = _productService.GetAll();
             if (result.Success)
             {
+
+                string recordKey = "Product_Cache";
+
+                var caching = _distributedCache.GetListRecordAsync<List<Product>>(recordKey);
+                if (caching.Result == null)
+                {
+                    _distributedCache.SetListRecordAsync<List<Product>>(recordKey, result.Data);
+                }
+                else
+                {
+                    return Ok(caching.Result);
+                }
+                
+
                 return Ok(result);
             }
 
