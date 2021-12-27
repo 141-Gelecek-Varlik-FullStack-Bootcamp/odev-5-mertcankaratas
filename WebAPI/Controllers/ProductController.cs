@@ -22,8 +22,8 @@ namespace WebAPI.Controllers
     {
        private readonly IProductService _productService;
        private readonly IDistributedCache _distributedCache;
+       string recordKey = "Product_Cache";
 
-        
 
         //constructor injection 
         public ProductController(IProductService productService, IDistributedCache distributedCache)
@@ -43,7 +43,7 @@ namespace WebAPI.Controllers
             if (result.Success)
             {
 
-                string recordKey = "Product_Cache";
+           
 
                 var caching = _distributedCache.GetListRecordAsync<List<Product>>(recordKey);
                 if (caching.Result == null)
@@ -168,10 +168,11 @@ namespace WebAPI.Controllers
 
         public IActionResult Add(Product product)
         {
+         
             var result = _productService.Add(product);
             if (result.Success)
             {
-
+                _distributedCache.DeleteRecordAsync<User>(recordKey);
                 return Ok(result);
             }
 
@@ -189,7 +190,7 @@ namespace WebAPI.Controllers
             var result = _productService.Delete(product);
             if (result.Success)
             {
-
+                _distributedCache.DeleteRecordAsync<User>(recordKey);
                 return Ok(result);
             }
 
@@ -206,6 +207,7 @@ namespace WebAPI.Controllers
             var result = _productService.Update(product);
             if (result.Success)
             {
+                _distributedCache.DeleteRecordAsync<User>(recordKey);
 
                 return Ok(result);
 
