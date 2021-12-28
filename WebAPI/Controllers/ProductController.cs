@@ -50,11 +50,11 @@ namespace WebAPI.Controllers
                 {
                     _distributedCache.SetListRecordAsync<List<Product>>(recordKey, result.Data);
                 }
-                //else
-                //{
-                //    return Ok(caching.Result);
-                //}
-                
+                else
+                {
+                    return Ok(caching.Result);
+                }
+
 
                 return Ok(result);
             }
