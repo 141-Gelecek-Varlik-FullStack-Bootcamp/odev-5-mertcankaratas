@@ -8,6 +8,10 @@ namespace Core.Utilities.Results
 {
     public class Result:IResult
     {
+        public Result()
+        {
+
+        }
         public Result(bool success, string message) : this(success)
         {
             Message = message;

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "T1kTC+5chjNpD37vHmySCYyhYs7/XeyhnLkqNCk7uW2eUqTuRlq0oZKBJMcGqPrDdbGLQE2uGuNj5TOk6h8NTw==",
+  "dgSpecHash": "Hty66kkQ1a3LJuby0XME9y7GfCMwLDEHn88xB4bkEI6/8oKYQVKYvvvtGCoG0Q+DfhCb6PMV1QYN/Gnp8F8vQw==",
   "success": true,
   "projectFilePath": "C:\\Users\\Mertcan\\source\\repos\\141-Gelecek-Varlik-FullStack-Bootcamp\\odev-4-mertcankaratas\\WebAPI\\WebAPI.csproj",
   "expectedPackageFiles": [
@@ -41,7 +41,7 @@
     "C:\\Users\\Mertcan\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
     "C:\\Users\\Mertcan\\.nuget\\packages\\microsoft.win32.registry\\5.0.0\\microsoft.win32.registry.5.0.0.nupkg.sha512",
     "C:\\Users\\Mertcan\\.nuget\\packages\\microsoft.win32.systemevents\\5.0.0\\microsoft.win32.systemevents.5.0.0.nupkg.sha512",
-    "C:\\Users\\Mertcan\\.nuget\\packages\\newtonsoft.json\\11.0.1\\newtonsoft.json.11.0.1.nupkg.sha512",
+    "C:\\Users\\Mertcan\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
     "C:\\Users\\Mertcan\\.nuget\\packages\\pagedlist\\1.17.0\\pagedlist.1.17.0.nupkg.sha512",
     "C:\\Users\\Mertcan\\.nuget\\packages\\pipelines.sockets.unofficial\\2.2.0\\pipelines.sockets.unofficial.2.2.0.nupkg.sha512",
     "C:\\Users\\Mertcan\\.nuget\\packages\\runtime.native.system\\4.3.0\\runtime.native.system.4.3.0.nupkg.sha512",

@@ -1,4 +1,5 @@
 ﻿using Microsoft.Extensions.Caching.Distributed;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,7 +15,7 @@ namespace WebAPI.Extensions
         {
             var options = new DistributedCacheEntryOptions();
             options.AbsoluteExpirationRelativeToNow = absoluteExpireTime ?? TimeSpan.FromMinutes(30);
-            var jsonData = JsonSerializer.Serialize(data);
+            var jsonData = JsonConvert.SerializeObject(data);
 
             await cache.SetStringAsync(recordId, jsonData, options);
         }
@@ -23,7 +24,7 @@ namespace WebAPI.Extensions
         {
             var options = new DistributedCacheEntryOptions();
             options.AbsoluteExpirationRelativeToNow = absoluteExpireTime ?? TimeSpan.FromMinutes(30);
-            var jsonData = JsonSerializer.Serialize(data);
+            var jsonData = JsonConvert.SerializeObject(data);
             byte[] bytes = Encoding.ASCII.GetBytes(jsonData);
             await cache.SetAsync(recordId,bytes, options);
         }
@@ -35,7 +36,7 @@ namespace WebAPI.Extensions
             {
                 return default(T);
             }
-            return JsonSerializer.Deserialize<T>(jsonData);
+            return JsonConvert.DeserializeObject<T>(jsonData);
 
             
         }
@@ -43,14 +44,23 @@ namespace WebAPI.Extensions
 
         public static async Task<T> GetListRecordAsync<T>(this IDistributedCache cache, string recordId)
         {
-            var jsonData = await cache.GetAsync(recordId);
+            var jsonData = cache.Get(recordId);
             if (jsonData == null)
             {
                 return default(T);
             }
-            var bytes = Encoding.ASCII.GetString(jsonData);
-            return JsonSerializer.Deserialize<T>(bytes);
-
+            try
+            {
+                var bytes = Encoding.ASCII.GetString(jsonData);
+                var test = JsonConvert.DeserializeObject<T>(bytes);
+                return test;
+            }
+            catch (Exception e)
+            {
+                var errorMessage = e;
+                throw errorMessage;
+            }
+           
 
         }
 

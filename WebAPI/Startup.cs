@@ -47,6 +47,7 @@ namespace WebAPI
             services.AddTransient<IUserDal, UserDal>();
             services.AddTransient<IAuthService, AuthManager>();
             services.AddScoped<ValidationFilterAttribute>();
+
             // services.AddScoped<IDistributedCache>();
             //InMemoryCache için inject
             //services.AddMemoryCache();

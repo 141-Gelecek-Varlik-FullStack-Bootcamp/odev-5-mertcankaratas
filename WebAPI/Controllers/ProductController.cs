@@ -1,4 +1,5 @@
 ﻿using Business.Abstract;
+using Core.Utilities.Results;
 using Entities.Concrete;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -40,15 +41,19 @@ namespace WebAPI.Controllers
         public IActionResult Getall()
         {
             var result = _productService.GetAll();
+           
+            
             if (result.Success)
             {
 
            
 
-                var caching = _distributedCache.GetListRecordAsync<List<Product>>(recordKey);
+                //var cach = _distributedCache.GetListRecordAsync<DataResult<List<Product>>>(recordKey);
+                var caching = _distributedCache.GetListRecordAsync<BaseResult<List<Product>>>(recordKey);
                 if (caching.Result == null)
                 {
-                    _distributedCache.SetListRecordAsync<List<Product>>(recordKey, result.Data);
+
+                    _distributedCache.SetListRecordAsync<IDataResult<List<Product>>>(recordKey,result);
                 }
                 else
                 {
