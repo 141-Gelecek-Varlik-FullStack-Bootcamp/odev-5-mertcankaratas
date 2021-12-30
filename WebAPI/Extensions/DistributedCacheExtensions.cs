@@ -11,7 +11,7 @@ namespace WebAPI.Extensions
 {
     public static class DistributedCacheExtensions
     {
-        public static async Task SetRecordAsync<T>(this IDistributedCache cache,string recordId, T data , TimeSpan? absoluteExpireTime = null,TimeSpan? unusedExpireTime =null)
+        public static async Task SetRecordAsync<T>(this IDistributedCache cache, string recordId, T data, TimeSpan? absoluteExpireTime = null, TimeSpan? unusedExpireTime = null)
         {
             var options = new DistributedCacheEntryOptions();
             options.AbsoluteExpirationRelativeToNow = absoluteExpireTime ?? TimeSpan.FromMinutes(30);
@@ -26,19 +26,19 @@ namespace WebAPI.Extensions
             options.AbsoluteExpirationRelativeToNow = absoluteExpireTime ?? TimeSpan.FromMinutes(30);
             var jsonData = JsonConvert.SerializeObject(data);
             byte[] bytes = Encoding.ASCII.GetBytes(jsonData);
-            await cache.SetAsync(recordId,bytes, options);
+            await cache.SetAsync(recordId, bytes, options);
         }
 
         public static async Task<T> GetRecordAsync<T>(this IDistributedCache cache, string recordId)
         {
-            var jsonData = await cache.GetStringAsync(recordId); 
-            if(jsonData == null)
+            var jsonData = await cache.GetStringAsync(recordId);
+            if (jsonData == null)
             {
                 return default(T);
             }
             return JsonConvert.DeserializeObject<T>(jsonData);
 
-            
+
         }
 
 
@@ -49,18 +49,13 @@ namespace WebAPI.Extensions
             {
                 return default(T);
             }
-            try
-            {
-                var bytes = Encoding.ASCII.GetString(jsonData);
-                var test = JsonConvert.DeserializeObject<T>(bytes);
-                return test;
-            }
-            catch (Exception e)
-            {
-                var errorMessage = e;
-                throw errorMessage;
-            }
-           
+
+            var bytes = Encoding.ASCII.GetString(jsonData);
+            var test = JsonConvert.DeserializeObject<T>(bytes);
+            return test;
+
+
+
 
         }
 
@@ -72,7 +67,7 @@ namespace WebAPI.Extensions
             {
                 return;
             }
-           
+
             await cache.RemoveAsync(recordId);
 
 
