@@ -30,9 +30,10 @@ namespace Business.Constant
         public static string ProductCountOfCategoryError = "Kategorideki ürün limitini aştınız";
         public static string ProductNameAlreadyExists = "Bu isimde zaten başka bir ürün var";
         public static string CategoryLimitExceded = "Categori limit aşıldı";
-        public static string AuthorizationDenied = "Yetkiniz yok";
+        public static string AuthorizationDenied = "Bu işlemi gerçekleştirmek için Yetkiniz yok";
         public static string UserRegistered = "giriş yapıldı";
         public static string PasswordError = "parola hatası";
+        public static string LoginRequired = "Bu işlemi gerçekleştirmek için Lütfen giriş yapınız";
         public static string SuccessfulLogin = "başarılı giriş";
         public static string UserAlreadyExists = "kullanıcı mevcut";
         public static string AccessTokenCreated = "giriş tokenı yaratıldı";

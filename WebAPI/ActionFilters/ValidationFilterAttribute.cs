@@ -1,4 +1,6 @@
 ﻿using Business.Abstract;
+using Business.Constant;
+using Core.Utilities.Results;
 using Entities.Concrete;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
@@ -12,13 +14,14 @@ using WebAPI.Extensions;
 
 namespace WebAPI.ActionFilters
 {
-    public class ValidationFilterAttribute : Attribute,IActionFilter
+    public class ValidationFilterAttribute : Attribute, IActionFilter
     {
         private readonly IDistributedCache _distributedCache;
-
+    
         public ValidationFilterAttribute(IDistributedCache distributedCache)
         {
             _distributedCache = distributedCache;
+           
         }
 
 
@@ -42,11 +45,19 @@ namespace WebAPI.ActionFilters
             string recordKey = "User_Login_Cache";
             var cache = _distributedCache.GetRecordAsync<User>(recordKey);
 
-            if (cache.Result==null)
+            if (cache.Result == null)
             {
-                context.Result = new UnauthorizedObjectResult("Bu işlemi gerçekleştirmek için Lütfen giriş yapınız");
+                //context.Result = new UnauthorizedObjectResult("Bu işlemi gerçekleştirmek için Lütfen giriş yapınız");
+                context.Result = new UnauthorizedObjectResult(new ErrorResult(Messages.LoginRequired));
+                return;
             }
+
+            if (cache.Result.Role != "admin")
+            {
+                context.Result = new UnauthorizedObjectResult(new ErrorResult(Messages.AuthorizationDenied));
+
+            }
+
         }
-      
     }
 }

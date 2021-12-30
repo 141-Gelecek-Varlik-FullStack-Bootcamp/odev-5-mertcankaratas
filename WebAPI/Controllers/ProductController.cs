@@ -21,9 +21,11 @@ namespace WebAPI.Controllers
     [ApiController]
     public class ProductController : ControllerBase
     {
-       private readonly IProductService _productService;
-       private readonly IDistributedCache _distributedCache;
-       string recordKey = "Product_Cache";
+        private readonly IProductService _productService;
+        private readonly IDistributedCache _distributedCache;
+        string recordKey = "Product_Cache";
+        string userRecordKey = "User_Login_Cache";
+      
 
 
         //constructor injection 
@@ -36,24 +38,24 @@ namespace WebAPI.Controllers
 
         //Sistemde olan tüm Ürünleri listeler 
         [HttpGet("getall")]
-       // [ServiceFilter(typeof(ValidationFilterAttribute))]
+        // [ServiceFilter(typeof(ValidationFilterAttribute))]
 
         public IActionResult Getall()
         {
             var result = _productService.GetAll();
-           
-            
+
+
             if (result.Success)
             {
 
-           
+
 
                 //var cach = _distributedCache.GetListRecordAsync<DataResult<List<Product>>>(recordKey);
                 var caching = _distributedCache.GetListRecordAsync<BaseResult<List<Product>>>(recordKey);
                 if (caching.Result == null)
                 {
 
-                    _distributedCache.SetListRecordAsync<IDataResult<List<Product>>>(recordKey,result);
+                    _distributedCache.SetListRecordAsync<IDataResult<List<Product>>>(recordKey, result);
                 }
                 else
                 {
@@ -71,11 +73,11 @@ namespace WebAPI.Controllers
 
         //verilen değerlere göre Sayfalama yapar
         [HttpGet("getallpaged")]
-       // [ServiceFilter(typeof(ValidationFilterAttribute))]
+        // [ServiceFilter(typeof(ValidationFilterAttribute))]
 
-        public IActionResult GetAllPaged(int pageNumber,int elementCount)
+        public IActionResult GetAllPaged(int pageNumber, int elementCount)
         {
-            var result = _productService.GetAllPaged(pageNumber,elementCount);
+            var result = _productService.GetAllPaged(pageNumber, elementCount);
             if (result.Success)
             {
                 return Ok(result);
@@ -90,9 +92,9 @@ namespace WebAPI.Controllers
         [HttpGet("getallpagedfilterasc")]
         //[ServiceFilter(typeof(ValidationFilterAttribute))]
 
-        public IActionResult GetAllGetAllPagedFilteringSortingAsc(int pageNumber, int elementCount,string name)
+        public IActionResult GetAllGetAllPagedFilteringSortingAsc(int pageNumber, int elementCount, string name)
         {
-            var result = _productService.GetAllPagedFilteringSortingAsc(pageNumber, elementCount,name);
+            var result = _productService.GetAllPagedFilteringSortingAsc(pageNumber, elementCount, name);
             if (result.Success)
             {
                 return Ok(result);
@@ -105,7 +107,7 @@ namespace WebAPI.Controllers
         //verilen değerlere göre sayfalama yapar filteler ve Price'a göre azalan sırada listeler
 
         [HttpGet("getallpagedfilterdesc")]
-       // [ServiceFilter(typeof(ValidationFilterAttribute))]
+        // [ServiceFilter(typeof(ValidationFilterAttribute))]
 
         public IActionResult GetAllGetAllPagedFilteringSortingDesc(int pageNumber, int elementCount, string name)
         {
@@ -137,7 +139,7 @@ namespace WebAPI.Controllers
 
         //Price'a göre azalan sırada sıralama yapar
         [HttpGet("getallsortdesc")]
-       // [ServiceFilter(typeof(ValidationFilterAttribute))]
+        // [ServiceFilter(typeof(ValidationFilterAttribute))]
         public IActionResult GetAllSortingDesc()
         {
             var result = _productService.GetAllSortedDesc();
@@ -153,7 +155,7 @@ namespace WebAPI.Controllers
         // ürünleri Name'e göre filtelemek için kullanılır  
 
         [HttpGet("getallfilter")]
-       // [ServiceFilter(typeof(ValidationFilterAttribute))]
+        // [ServiceFilter(typeof(ValidationFilterAttribute))]
         public IActionResult GetAllSorting(string filter)
         {
             var result = _productService.GetAllFiltered(filter);
@@ -173,7 +175,8 @@ namespace WebAPI.Controllers
 
         public IActionResult Add(Product product)
         {
-         
+            var cache = _distributedCache.GetRecordAsync<User>(userRecordKey);
+            product.Iuser = cache.Result.Id;
             var result = _productService.Add(product);
             if (result.Success)
             {
@@ -209,7 +212,10 @@ namespace WebAPI.Controllers
 
         public IActionResult Update(Product product)
         {
+
             var result = _productService.Update(product);
+            var cache = _distributedCache.GetRecordAsync<User>(userRecordKey);
+            product.Uuser = cache.Result.Id;
             if (result.Success)
             {
                 _distributedCache.DeleteRecordAsync<User>(recordKey);

@@ -30,6 +30,9 @@ namespace Business.Concrete
         }
         public IResult Add(Product product)
         {
+            product.Idate = DateTime.Now;
+            product.IsActive = true;
+            product.IsDeleted = false;
             _productDal.Add(product);
             return new SuccessResult(Messages.ProductAdded);
         }
@@ -78,6 +81,7 @@ namespace Business.Concrete
         //Güncelleme yapmak için kullanılır
         public IResult Update(Product product)
         {
+            product.Udate = DateTime.Now;
             _productDal.Update(product);
             return new SuccessResult(Messages.ProductUpdated);
         }

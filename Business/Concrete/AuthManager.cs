@@ -27,9 +27,14 @@ namespace Business.Concrete
             if (userToCheckEmail.Success)
             {
 
-                if(userToCheckEmail.Data.Email.Equals(user.Email) && userToCheckEmail.Data.Password.Equals(user.Password))
+                if (userToCheckEmail.Data.Email.Equals(user.Email) && userToCheckEmail.Data.Password.Equals(user.Password))
+                {
+                    user.Id = userToCheckEmail.Data.Id;
+                    user.Role = userToCheckEmail.Data.Role;
                     return new SuccessDataResult<User>(Messages.UserRegistered);
+                }
             }
+                    
             return new ErrorDataResult<User>(Messages.CheckEmailOrPassword);
         }
 
