@@ -62,6 +62,7 @@ namespace WebAPI
             {
 
                options.Configuration = Configuration.GetConnectionString("Redis");
+                
                //ConnectionMultiplexer.Connect("Redis");
 
             });

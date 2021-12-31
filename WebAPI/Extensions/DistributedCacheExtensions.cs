@@ -25,7 +25,7 @@ namespace WebAPI.Extensions
             var options = new DistributedCacheEntryOptions();
             options.AbsoluteExpirationRelativeToNow = absoluteExpireTime ?? TimeSpan.FromMinutes(30);
             var jsonData = JsonConvert.SerializeObject(data);
-            byte[] bytes = Encoding.ASCII.GetBytes(jsonData);
+            byte[] bytes = Encoding.UTF8.GetBytes(jsonData);
             await cache.SetAsync(recordId, bytes, options);
         }
 
@@ -50,7 +50,7 @@ namespace WebAPI.Extensions
                 return default(T);
             }
 
-            var bytes = Encoding.ASCII.GetString(jsonData);
+            var bytes = Encoding.UTF8.GetString(jsonData);
             var test = JsonConvert.DeserializeObject<T>(bytes);
             return test;
 
