@@ -10,7 +10,17 @@ using System.Threading.Tasks;
 namespace WebAPI.Extensions
 {
     public static class DistributedCacheExtensions
-    {
+    {/// <summary>
+    /// Redis ile ilgili işlemlerin daha kolay çağrılabilmesi için bir extension haline getirilmiştir.
+    /// Burada kullanıcıyı,ürünleri redis ile tutulması için extension methodlar yazılmıştır.
+    /// </summary>
+    /// <typeparam name="T"></typeparam>
+    /// <param name="cache"></param>
+    /// <param name="recordId"></param>
+    /// <param name="data"></param>
+    /// <param name="absoluteExpireTime"></param>
+    /// <param name="unusedExpireTime"></param>
+    /// <returns></returns>
         public static async Task SetRecordAsync<T>(this IDistributedCache cache, string recordId, T data, TimeSpan? absoluteExpireTime = null, TimeSpan? unusedExpireTime = null)
         {
             var options = new DistributedCacheEntryOptions();
