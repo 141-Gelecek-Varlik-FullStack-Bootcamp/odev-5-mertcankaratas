@@ -14,7 +14,7 @@
 ### Sayafalama Filtreleme ve Sıralama  tek bir istekte yazıldı.
 ### Redis projeye dahil edildi. Sisteme Login olan kullanıcı ve ürünlerin tutulması konusunda test edildi.
 
-### Hangire kurulumu yapıldı. Mail gönderme işi tanımlandı.
+### Hangfire kurulumu yapıldı. Mail gönderme işi tanımlandı.
 
 
 ### Arayüz için React Kullanıldı.
